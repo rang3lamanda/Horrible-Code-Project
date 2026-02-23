@@ -21,7 +21,8 @@ Good version:
     Each function was implemented to perform one simple task. By following this principle
     this version of the code is easy to follow and it also avoids any unnecessary complex code.
 
-Bad Version:
+Bad Version: 
+    The bad version violates KISS by mixing multiple responsibilites inside functions. For example, the math functions handle input, conversion, calculation, and printing all at once. The overall structure is less organized and more repetitive than necessary.
 
 ----------------------------------------------------------------------------------------------------
 2. DRY (Don't Repeat Yourself)
@@ -30,7 +31,8 @@ Good version:
     Each function that includes mathematical operations is only written once and it is not reused in
     anywhere later in the code.
 
-Bad Version:
+Bad Version: 
+    The bad version repeats similar code across functions. Both math functions seperately collect input and convert it to floats instead of using a shared helper function. Some results are printed more than once unneccessarily. This duplication makes the code harder to maintain
 
 ----------------------------------------------------------------------------------------------------
 3. Single Responsibility Principle
@@ -40,7 +42,8 @@ Good version:
     by zero are handled appropriately. The main function manages user input and output.
     Implementing this helps to keep the code organized and easy to read.
 
-Bad Version:
+Bad Version: 
+    Functions in the bad version perform multiple tasks at once. For example, the operation functions gather input, perform calculations, and print results. The 'run_calculator()' function also handles the menu, loop control, and even modifies a global variable. This lack of seperation makes the code less strucutred and harder to maintain.
 
 
 
